@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: anonymous-group-debate-api
+    env: node
+    plan: free
+    rootDir: .
+    buildCommand: npm install
+    startCommand: node ./bin/www
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MONGODB_URI
+        sync: false
+
+  - type: web
+    name: anonymous-group-debate-web
+    env: static
+    plan: free
+    rootDir: app_public
+    buildCommand: npm ci && npm run build
+    publishPath: dist/anonymous-group-debate-spa/browser
+    autoDeploy: true
+    routes:
+      - type: rewrite
+        source: "/**"
+        destination: "/index.html"
