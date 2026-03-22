@@ -1,0 +1,29 @@
+{
+  "name": "anonymous-group-debate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Anonymous Group Debate - Professional Anonymous Group Debate Platform",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "dev:frontend": "cd app_public && npm start",
+    "install:all": "npm install && cd app_public && npm install",
+    "build": "cd app_public && npm run build",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^20.3.5",
+    "@angular/cli": "^20.3.5",
+    "nodemon": "^3.1.0"
+  }
+}

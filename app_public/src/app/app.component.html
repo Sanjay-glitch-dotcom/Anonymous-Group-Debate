@@ -1,0 +1,31 @@
+<header class="header">
+  <nav class="nav">
+    <div class="nav-brand">
+      <a routerLink="/" class="brand-link">
+        <h2>Anonymous Group Debate</h2>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a routerLink="/dashboard" class="nav-link" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/create" class="nav-link" routerLinkActive="active">Create Debate</a>
+    </div>
+    <div class="nav-auth">
+      <button class="theme-toggle-btn" (click)="toggleTheme()" aria-label="Toggle Dark Mode">
+        <span *ngIf="isDarkTheme">☀️</span>
+        <span *ngIf="!isDarkTheme">🌙</span>
+      </button>
+      <div *ngIf="!authService.isLoggedIn()">
+        <a routerLink="/login" class="btn btn-primary">Login</a>
+        <a routerLink="/signup" class="btn btn-primary">Sign Up</a>
+      </div>
+      <div *ngIf="authService.isLoggedIn()">
+        <span class="user-greeting">Welcome!</span>
+        <button (click)="logout()" class="btn btn-primary">Logout</button>
+      </div>
+    </div>
+  </nav>
+</header>
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
