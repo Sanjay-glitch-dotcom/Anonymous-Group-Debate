@@ -9,7 +9,9 @@ A modern, professional debate platform built with the MEAN stack (MongoDB, Expre
 ## ✨ Features
 
 ### 🎨 **Professional UI/UX**
-- Modern, responsive design with beautiful gradients and animations
+- 🌓 Seamless Light/Dark Mode with intelligent state persistence and anti-FOUC integration
+- Dynamic, animated Hero section with vibrant gradients
+- Modern, responsive design utilizing universal CSS variables
 - Professional navigation with sticky header and active states
 - Interactive cards with hover effects and smooth transitions
 - Mobile-first responsive design
@@ -34,6 +36,7 @@ A modern, professional debate platform built with the MEAN stack (MongoDB, Expre
 
 ### 💬 **Advanced Debate Features**
 - Create and manage debates with rich descriptions
+- ⏰ Time-limited debates automatically close 15 minutes after creation
 - Anonymous reply system (max 3 per user)
 - Community voting on closed debates
 - AI-powered debate summaries
